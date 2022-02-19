@@ -1,8 +1,13 @@
 import ReactDOM from "react-dom";
 import "./main.css";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-    return <h1 className="text-3xl">Airbnb Experiences</h1>;
+    return (
+        <div className="font-poppins">
+            <Navbar />
+        </div>
+    );
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
