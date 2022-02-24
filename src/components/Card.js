@@ -8,7 +8,10 @@ const Card = (props) => {
                     <div className="badge absolute top-2 left-2 bg-white rounded text-xs py-1 w-[70px] text-center">
                         SOLD OUT
                     </div>
-                    <img src={require(`../assets/${props.img}`)} alt={props.title} />
+                    <img
+                        src={require(`../assets/${props.img}`)}
+                        alt={props.title}
+                    />
                 </div>
                 <div className="rating flex gap-1 mt-2">
                     <img src={starSvg} alt="" />
