@@ -5,9 +5,9 @@ const Card = (props) => {
         <div className="card w-[180px] min-w-[180px]">
             <a href="/">
                 <div className="image relative">
-                    <div className="badge absolute top-2 left-2 bg-white rounded text-xs py-1 w-[70px] text-center">
+                    {/* <div className="badge absolute top-2 left-2 bg-white rounded text-xs py-1 w-[70px] text-center">
                         SOLD OUT
-                    </div>
+                    </div> */}
                     <img
                         src={require(`../assets/${props.img}`)}
                         alt={props.title}
