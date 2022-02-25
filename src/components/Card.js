@@ -19,16 +19,16 @@ const Card = (props) => {
                         </div>
                     )}
                     <img
-                        src={require(`../assets/${props.img}`)}
+                        src={require(`../assets/${props.coverImg}`)}
                         alt={props.title}
                     />
                 </div>
                 <div className="rating flex gap-1 mt-2">
                     <img src={starSvg} alt="" />
                     <p>
-                        {props.rating}
+                        {props.stats.rating}
                         <span className="text-[#918E9B] ml-1">
-                            ({props.reviewCount}) • {props.location}
+                            ({props.stats.reviewCount}) • {props.location}
                         </span>
                     </p>
                 </div>
