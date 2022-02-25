@@ -1,13 +1,23 @@
 import starSvg from "../assets/star.svg";
 
 const Card = (props) => {
+    let badgeText;
+
+    if (props.openSpots <= 0) {
+        badgeText = "SOLD OUT";
+    } else if (props.location === "Online") {
+        badgeText = "ONLINE";
+    }
+
     return (
         <div className="card w-[180px] min-w-[180px]">
             <a href="/">
                 <div className="image relative">
-                    {/* <div className="badge absolute top-2 left-2 bg-white rounded text-xs py-1 w-[70px] text-center">
-                        SOLD OUT
-                    </div> */}
+                    {badgeText && (
+                        <div className="badge absolute top-2 left-2 bg-white rounded text-xs py-1 w-[70px] text-center">
+                            {badgeText}
+                        </div>
+                    )}
                     <img
                         src={require(`../assets/${props.img}`)}
                         alt={props.title}
@@ -18,7 +28,7 @@ const Card = (props) => {
                     <p>
                         {props.rating}
                         <span className="text-[#918E9B] ml-1">
-                            ({props.reviewCount}) • {props.country}
+                            ({props.reviewCount}) • {props.location}
                         </span>
                     </p>
                 </div>

@@ -10,7 +10,7 @@ const Data = [
             rating: 5.0,
             reviewCount: 6,
         },
-        location: "Online", 
+        location: "Online",
         openSpots: 0,
     },
     {
